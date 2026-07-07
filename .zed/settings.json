@@ -1,0 +1,9 @@
+{
+  "languages": {
+    "TypeScript": {
+      "inlay_hints": {
+        "enabled": true
+      }
+    }
+  }
+}
