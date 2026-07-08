@@ -1,6 +1,6 @@
 import "./globals.css";
 import Home from "./page";
-
+import Navbar from "./navbar/page";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -8,7 +8,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
