@@ -15,50 +15,32 @@ export default function Nav(): React.ReactElement {
           </Link>
         </nav>
         <nav className="mr-5">
-          <Link
-            href="#"
-            className="relative after:content-[''] after:absolute after:bg-gray-500 after:w-0 after:h-[0.2px] after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
-          >
+          <Link href="#" className="line">
             About Us
           </Link>
         </nav>
         <nav className="mr-5">
-          <Link
-            href="#"
-            className="relative after:content-[''] after:absolute after:bg-gray-500 after:w-0 after:h-[0.2px] after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
-          >
+          <Link href="#" className="line">
             Categories
           </Link>
         </nav>
         <nav className="mr-5">
-          <Link
-            href="#"
-            className="relative after:content-[''] after:absolute after:bg-gray-500 after:w-0 after:h-[0.2px] after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
-          >
+          <Link href="#" className="line">
             Agros
           </Link>
         </nav>
         <nav className="mr-5">
-          <Link
-            href="#"
-            className="relative after:content-[''] after:absolute after:bg-gray-500 after:w-0 after:h-[0.2px] after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
-          >
+          <Link href="#" className="line">
             Producers
           </Link>
         </nav>
         <nav className="mr-5">
-          <Link
-            href="#"
-            className="relative after:content-[''] after:absolute after:bg-gray-500 after:w-0 after:h-[0.2px] after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
-          >
+          <Link href="#" className="line">
             Transport
           </Link>
         </nav>
         <nav className="mr-5">
-          <Link
-            href="#"
-            className="relative after:content-[''] after:absolute after:bg-gray-500 after:w-0 after:h-[0.2px] after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
-          >
+          <Link href="#" className="line">
             Contacts
           </Link>
         </nav>

@@ -8,3 +8,7 @@
     --color-softblush: #e2cbd0;
     --color-lavenderblush: #eadcdc;
 }
+
+.line {
+    @apply relative after:content-[''] after:absolute after:bg-gray-500 after:w-0 after:h-[0.2px] after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300;
+}
