@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex p-2 justify-center border-b border-gray-200">
-      {/*Big div wrapper */}
+      {/*--------------Big div wrapper--------DOIT ETRE CHANGE EN CLIENT SIDE RENDERER POUR OPTION ET SEARCHBAR-------------------------- */}
       <Image
         src={"/images/gromuse.png"}
         alt="logo"
@@ -11,9 +11,9 @@ export default function Home() {
         width={180}
         className="inline"
       />
-      <div className="w-[50%] h-12 bg-amber-200 border rounded-r-xl border-gray-300 ml-15">
-        {/*searchbar div */}
-        <span className="border-r rounded-l-3xl border w-full h-full border-gray-900">
+      <div className="w-[42%] h-full py-0  border rounded-r-xl border-gray-300  ml-15 flex">
+        {/*----------------------------------------------------------searchbar div------------------------------------------------ */}
+        <span className="border-r  p-2 rounded-l-3xl border w-45 h-full border-gray-900">
           <Image
             src={"pin.svg"}
             height={20}
@@ -23,25 +23,24 @@ export default function Home() {
           />
           <span>Your location</span>
         </span>
-        <span className="">
-          <span>
-            <input
-              placeholder="search products..."
-              className="w-[77%] h-full border-none"
-            ></input>
-          </span>
-          <span className="bg-primaryg bg-cover h-[50%] w-[50%]">
-            <Image
-              src={"search.svg"}
-              height={20}
-              width={25}
-              alt="pin"
-              className="inline bg-cover"
-            />
-          </span>
+        <span className="w-[87%]">
+          <input
+            placeholder="search products..."
+            className="p-2 h-full w-full outline-none flex-1 border-none"
+          ></input>
+        </span>
+        <span className="bg-primaryg h-full w-15  p-2">
+          <Image
+            src={"search.svg"}
+            height={20}
+            width={30}
+            alt="pin"
+            className="inline "
+          />
         </span>
       </div>
       <div className="px-4 py-3 ml-2">
+        {/*-----------------------------------------------------SIDE THINGS --------------------------------------------------*/}
         <span>
           <span className="p-1">
             <Image
@@ -54,7 +53,7 @@ export default function Home() {
           </span>
           <span className="relative">
             Cart
-            <span className="absolute text-sm mb-4 p-1 bg-secondaryg rounded-4xl w-4 h-4 text-white text-center ">
+            <span className="absolute text-xs mb-4 p-1 bg-secondaryg rounded-full flex -top-2 -right-3.5 text-white justify-center items-center w-4 h-4 ">
               1
             </span>
           </span>
