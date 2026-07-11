@@ -6,10 +6,10 @@ export default function Home() {
       <div className="flex p-2 justify-center border-b border-gray-200">
         {/*--------------Big div wrapper--------DOIT ETRE CHANGE EN CLIENT SIDE RENDERER POUR OPTION ET SEARCHBAR-------------------------- */}
         <Image
-          src={"/images/gromuse.png"}
+          src={"/logo.png"}
           alt="logo"
           height={100}
-          width={180}
+          width={160}
           className="inline"
         />
         <div className="w-[42%] h-full py-0  border rounded-r-xl border-gray-300  ml-15 flex">
