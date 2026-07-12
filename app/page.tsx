@@ -1,7 +1,13 @@
 import Image from "next/image";
-import Nav from "./navbar/components/nav";
+import Nav from "./components/nav";
+import BigCarrousel from "./components/bigCarrousel";
+import getProducts from "@/lib/getProducts";
+import Product from "./interfaces/productInt";
 export default function Home() {
+  const products: Product[] = getProducts();
+  const orange:Product = products[2];
   return (
+
     <>
       <div className="flex p-2 justify-center border-b border-gray-200">
         {/*--------------Big div wrapper--------DOIT ETRE CHANGE EN CLIENT SIDE RENDERER POUR OPTION ET SEARCHBAR-------------------------- */}
@@ -74,6 +80,7 @@ export default function Home() {
         </div>
       </div>
       <Nav />
+      <BigCarrousel product={orange} />;
     </>
   );
 }

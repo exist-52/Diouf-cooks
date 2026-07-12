@@ -1,0 +1,16 @@
+export default interface Product {
+  id: number,
+  categorie_id: number,
+  nom: string,
+  image: string,
+  prix: number,
+  quantite_dispo: number,
+  etoiles_1: number,
+  etoiles_2: number,
+  etoiles_3: number,
+  etoiles_4: number,
+  etoiles_5: number,
+  nom_vendeur: string,
+  lieu_vendeur: string,
+  temps_boutique: string,
+};
