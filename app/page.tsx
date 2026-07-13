@@ -80,7 +80,7 @@ export default function Home() {
         </div>
       </div>
       <Nav />
-      <BigCarrousel product={orange} />;
+      <BigCarrousel product={orange} />
     </>
   );
 }

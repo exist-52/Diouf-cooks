@@ -13,7 +13,7 @@ export default function getProducts(): Product[]{
     catch (error) {
       console.error(error);
       return [];
-    } //le try catch ici est inutile cuz its just a typecasting but im keeping it anyways
+    } //le try catch ici est inutile cuz its just a typecasting but it works...dont touch it.
   }
   else {
     console.error("the table index is wrong ");
