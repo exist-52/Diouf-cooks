@@ -2,29 +2,30 @@
 import BigCarrousel from "./bigCarrousel";
 import getProducts from "@/lib/getProducts";
 import Product from "../interfaces/productInt";
+import { useState } from "react";
 
 export default function Slider(): React.ReactElement {
-  const products: Product[] = getProducts();
-  const orange: Product = products[2];
-  const avocat: Product = products[20];
-  const mangue: Product = products[19];
-  return (
-    <div className="w-full h-fit">
-      <div className="flex gap-8 ">
-        <span className="flex-3">
-          <BigCarrousel product={orange} />
-        </span>
-        <span className="flex-1">
-          <BigCarrousel product={avocat} />
-        </span>
-        <span className="flex-1">
-          <BigCarrousel product={mangue} />
-        </span>
+  const [current, setCurrent] = useState(0);
+  const Products = getProducts();
+  const slides = [Products[2], Products[20], Products[19]];
+  const product: Product = Products[current];
+  function next() {
+    const nextSlide:number = (current + 1) % 3; //le rest de la division par 3 ne depassera pas 3 et reviendra a 0
+    setCurrent(nextSlide);
+  }
+  function prev()  {
+    const prevSlide: number = (current - 1 + 3) % 3; //cuz 4%3 = 1
+    setCurrent(prevSlide);
+  }
+    return (
+      <div className="w-full">
+        <div className=" ">
+          <BigCarrousel product={slides[current]} />
+        </div>
+        <div className="flex justify-center ">
+          <button onClick={prev} className="rounded-full px-3.5 py-2 shadow-5xl shadow-md m-5 hover:text-white hover:bg-secondaryg transition-all duration-100 cursor-pointer">ᐸ</button>
+          <button onClick={next} className="rounded-full px-3.5 py-2 shadow-5xl shadow-md m-5 hover:text-white hover:bg-secondaryg transition-all duration-100 cursor-pointer">ᐳ</button>
+        </div>
       </div>
-      <div className="flex justify-center ">
-        <button className="rounded-full px-3.5 py-2 shadow-5xl shadow-md m-5 hover:text-white hover:bg-secondaryg transition-all duration-100 cursor-pointer">ᐸ</button>
-        <button className="rounded-full px-3.5 py-2 shadow-5xl shadow-md m-5 hover:text-white hover:bg-secondaryg transition-all duration-100 cursor-pointer">ᐳ</button>
-      </div>
-    </div>
-  )
-}
+    )
+  }
